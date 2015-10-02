@@ -12,6 +12,13 @@ class AuvergneTHDParser:
     """
     Cette classe parse et construit une liste de dictionnaires contenant
     les informations du deploiement THD en Auvergne
+
+    Les fichiers kml ont été extraits des url suivantes 
+
+    http://www.auvergnetreshautdebit.fr/wp-content/themes/athd/kml/phase2/ftth-phase2.kml?20151002100409
+
+    http://www.auvergnetreshautdebit.fr/wp-content/themes/athd/kml/ftth.kml?20151002100409
+
     """
     def __init__(self):
         self.deploiements = self.make_data_from_kml(['ftth-phase1.kml', 'ftth-phase2.kml'])
