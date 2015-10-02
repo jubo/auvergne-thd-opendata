@@ -4,6 +4,8 @@ from flask import Flask
 from flask import make_response
 import xml.etree.ElementTree as xml
 
+PREFIX_DATES = u"FttH - Travaux de déploiement de "
+
 app = Flask(__name__)
 
 class AuvergneTHDParser:
@@ -22,10 +24,11 @@ class AuvergneTHDParser:
         ret = []
         for filename in filename_list:
             root = xml.parse(filename).getroot()
-            for node in root.findall('Document/Folder/Placemark/ExtendedData/SchemaData'):
+            for node in root.findall('Document/Folder/Placemark'):
                 deploiement = dict()
-                for subnode in node.findall('SimpleData'):
+                for subnode in node.findall('ExtendedData/SchemaData/SimpleData'):
                     deploiement[subnode.attrib['name']] = subnode.text
+                deploiement["DATES"] = node.findall("name")[0].text.replace(PREFIX_DATES, "")
                 ret.append(deploiement)
         return ret
 
@@ -53,5 +56,4 @@ def getcsvfromdict(filename, d):
     return output
 
 #app.run(debug=True)
-
 #print get_phase1_all()
