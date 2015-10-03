@@ -5,8 +5,6 @@ from flask import make_response
 import xml.etree.ElementTree as xml
 import re
 
-REGEX_DATES = u'de(.*)?à(.*)'
-
 app = Flask(__name__)
 
 class AuvergneTHDParser:
@@ -16,9 +14,8 @@ class AuvergneTHDParser:
 
     Les fichiers kml ont été extraits des url suivantes 
 
-    http://www.auvergnetreshautdebit.fr/wp-content/themes/athd/kml/phase2/ftth-phase2.kml?20151002100409
-
-    http://www.auvergnetreshautdebit.fr/wp-content/themes/athd/kml/ftth.kml?20151002100409
+    wget -O ftth-phase1.kml http://www.auvergnetreshautdebit.fr/wp-content/themes/athd/kml/phase2/ftth-phase2.kml?20151002100409
+    wget -O ftth-phase2.kml http://www.auvergnetreshautdebit.fr/wp-content/themes/athd/kml/ftth.kml?20151002100409
 
     """
     def __init__(self):
@@ -38,8 +35,6 @@ class AuvergneTHDParser:
                     deploiement[subnode.attrib['name']] = subnode.text
                 name = node.findall("name")[0].text               
                 deploiement["DATES"] = name.split('de')[2]
-                # test =  deploiement["DATES"]
-                #print '%s' % test
                 ret.append(deploiement)
         return ret
 
