@@ -35,7 +35,7 @@ class AuvergneTHDParser:
                 deploiement = dict()
                 for subnode in node.findall('ExtendedData/SchemaData/SimpleData'):
                     deploiement[subnode.attrib['name']] = subnode.text
-                deploiement["DATES"] = node.findall("name")[0].text.replace(PREFIX_DATES, "")
+                deploiement["DATES"] = node.findall("name")[0].text
                 ret.append(deploiement)
         return ret
 
@@ -48,11 +48,15 @@ def info():
 @app.route('/phase1/all')
 def get_phase1_all():
     d = [item.values() for item in parser.deploiements if item['ZONE'] == 'Phase 1']
+    if(len(parser.deploiements) > 0):
+        d.insert(0, parser.deploiements[0].keys())
     return getcsvfromdict('phase1.csv', d)
 
 @app.route('/phase2/all')
 def get_phase2_all():
     d = [item.values() for item in parser.deploiements if item['ZONE'] == 'Phase 2']
+    if(len(parser.deploiements) > 0):
+        d.insert(0, parser.deploiements[0].keys())
     return getcsvfromdict('phase2.csv', d)
 
 def getcsvfromdict(filename, d):
@@ -62,5 +66,5 @@ def getcsvfromdict(filename, d):
     output.headers["Content-type"] = "text/csv"
     return output
 
-#app.run(debug=True)
+app.run(debug=True)
 #print get_phase1_all()
