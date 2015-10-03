@@ -1,3 +1,12 @@
-# auvergne-thd-opendata
+# Auvergne-THD-OpenData
 Compiler les informations disponibles sur le site auvergne haut débit sous un format exploitable.
-Licence : GPL V3. http://choosealicense.com/licenses/gpl-3.0/
+
+* Licence : GPL V3. http://choosealicense.com/licenses/gpl-3.0/
+* Url de déploiement Heroku (en attendant une url plus propre :) ) : https://peaceful-hamlet-8506.herokuapp.com/
+* Données FTTH de la phase 1 au format CSV : https://peaceful-hamlet-8506.herokuapp.com/phase1/all
+* Données FTTH de la phase 2 au format CSV : https://peaceful-hamlet-8506.herokuapp.com/phase2/all
+
+* Features à venir
+  * sortie au format JSON, XML et HTML
+  * possibilité de recherche par nom de commune et/ou code insee
+  * lien vers le site Auvergne HD carto
