@@ -1,5 +1,5 @@
 # Auvergne-THD-OpenData
-Compiler les informations disponibles sur le site auvergne haut débit sous un format exploitable.
+Objectif : Donner accès aux informations du site http://www.auvergnetreshautdebit.fr/ concernant l'avancement du déploiement de la fibre sous un format exploitable.
 
 * Licence : GPL V3. http://choosealicense.com/licenses/gpl-3.0/
 * Url de déploiement Heroku (en attendant une url plus propre :) ) : https://peaceful-hamlet-8506.herokuapp.com/
