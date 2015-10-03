@@ -3,8 +3,9 @@ import os
 from flask import Flask
 from flask import make_response
 import xml.etree.ElementTree as xml
+import re
 
-PREFIX_DATES = u"FttH - Travaux de déploiement de "
+REGEX_DATES = u'de(.*)?à(.*)'
 
 app = Flask(__name__)
 
@@ -35,7 +36,10 @@ class AuvergneTHDParser:
                 deploiement = dict()
                 for subnode in node.findall('ExtendedData/SchemaData/SimpleData'):
                     deploiement[subnode.attrib['name']] = subnode.text
-                deploiement["DATES"] = node.findall("name")[0].text
+                name = node.findall("name")[0].text               
+                deploiement["DATES"] = name.split('de')[2]
+                # test =  deploiement["DATES"]
+                #print '%s' % test
                 ret.append(deploiement)
         return ret
 
