@@ -70,5 +70,5 @@ def getcsvfromdict(filename, d):
     output.headers["Content-type"] = "text/csv"
     return output
 
-app.run(debug=True)
+#app.run(debug=True)
 #print get_phase1_all()
