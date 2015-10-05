@@ -21,6 +21,7 @@ Principe : recherche en fonction de mots clé dans le champ spécifié.
   * sortie au format HTML
   * lien vers le site Auvergne HD carto
   * IHM de recherche
+  * Statistiques de déploiement sur l'ensemble des communes de la région
 
 * Bugs connus : 
   * Format JSON : Caractères spéciaux mal affichés (encodage sortie) 
