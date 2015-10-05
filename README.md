@@ -16,10 +16,11 @@ Principe : recherche en fonction de mots clé dans le champ spécifié.
   * Données FTTH du département 63 au format JSON : https://peaceful-hamlet-8506.herokuapp.com/search/?key=DEPARTEMEN&val=63&format=json
 
 * Features à venir
+  * parsing des dates de déploiement pour analyse
   * récupérer dynamiquement les données du site auvergnetreshautdebit.fr en passant l'url à analyser dans la requête http
   * sortie au format HTML
-  * possibilité de recherche par nom de commune et/ou code insee
   * lien vers le site Auvergne HD carto
+  * IHM de recherche
 
 * Bugs connus : 
   * Format JSON : Caractères spéciaux mal affichés (encodage sortie) 
