@@ -7,6 +7,7 @@ Objectif : Donner accès aux informations du site http://www.auvergnetreshautdeb
 * Données FTTH de la phase 2 au format CSV : https://peaceful-hamlet-8506.herokuapp.com/phase2/all
 
 * Features à venir
+  * récupérer dynamiquement les données du site auvergnetreshautdebit.fr en passant l'url à analyser dans la requête http
   * sortie au format JSON, XML et HTML
   * possibilité de recherche par nom de commune et/ou code insee
   * lien vers le site Auvergne HD carto
