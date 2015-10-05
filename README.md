@@ -6,6 +6,9 @@ Objectif : Donner accès aux informations du site http://www.auvergnetreshautdeb
 * Toutes les données FTTH    au format CSV : https://peaceful-hamlet-8506.herokuapp.com/search/
 
 Principe : recherche en fonction de mots clé dans le champ spécifié.
+* url de recherche : https://peaceful-hamlet-8506.herokuapp.com/search/
+* champs de recherche disponibles (cf sortie CSV) : DATES,	INSEE,	ZONE,	DEPARTEMEN,	ACTIVE,	NOM_NRO,	CODE_NRO,	INSEE_1,	JAL_DEB,	JAL_FIN,	LOG
+* remonte tous les items dont les champs de recherche _contient_ la valeur indiquée.
 
 * Exemples d'utilisation :
   * Données FTTH de la phase 1 au format CSV : https://peaceful-hamlet-8506.herokuapp.com/search/?key=ZONE&val=1
