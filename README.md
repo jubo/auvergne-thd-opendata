@@ -3,11 +3,24 @@ Objectif : Donner accès aux informations du site http://www.auvergnetreshautdeb
 
 * Licence : GPL V3. http://choosealicense.com/licenses/gpl-3.0/
 * Url de déploiement Heroku (en attendant une url plus propre :) ) : https://peaceful-hamlet-8506.herokuapp.com/
-* Données FTTH de la phase 1 au format CSV : https://peaceful-hamlet-8506.herokuapp.com/phase1/all
-* Données FTTH de la phase 2 au format CSV : https://peaceful-hamlet-8506.herokuapp.com/phase2/all
+* Toutes les données FTTH    au format CSV : https://peaceful-hamlet-8506.herokuapp.com/search/
+
+Principe : recherche en fonction de mots clé dans le champ spécifié.
+
+* Exemples d'utilisation :
+  * Données FTTH de la phase 1 au format CSV : https://peaceful-hamlet-8506.herokuapp.com/search/?key=ZONE&val=1
+  * Données FTTH de la phase 1 au format CSV : https://peaceful-hamlet-8506.herokuapp.com/search/?key=ZONE&val=1
+  * Données FTTH de la phase 1 au format JSON : https://peaceful-hamlet-8506.herokuapp.com/search/?key=ZONE&val=1&format=json
+  * Données FTTH de la phase 2 au format JSON : https://peaceful-hamlet-8506.herokuapp.com/search/?key=ZONE&val=2&format=json
+  * Données FTTH du département 63 au format CSV : https://peaceful-hamlet-8506.herokuapp.com/search/?key=DEPARTEMEN&val=63
+  * Données FTTH du département 63 au format JSON : https://peaceful-hamlet-8506.herokuapp.com/search/?key=DEPARTEMEN&val=63&format=json
 
 * Features à venir
   * récupérer dynamiquement les données du site auvergnetreshautdebit.fr en passant l'url à analyser dans la requête http
-  * sortie au format JSON, XML et HTML
+  * sortie au format HTML
   * possibilité de recherche par nom de commune et/ou code insee
   * lien vers le site Auvergne HD carto
+
+* Bugs connus : 
+  * Format JSON : Caractères spéciaux mal affichés (encodage sortie) 
+  * Clé inconnue dans les SimpleSchema du kml
