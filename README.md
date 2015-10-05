@@ -14,6 +14,7 @@ Principe : recherche en fonction de mots clé dans le champ spécifié.
   * Données FTTH de la phase 2 au format JSON : https://peaceful-hamlet-8506.herokuapp.com/search/?key=ZONE&val=2&format=json
   * Données FTTH du département 63 au format CSV : https://peaceful-hamlet-8506.herokuapp.com/search/?key=DEPARTEMEN&val=63
   * Données FTTH du département 63 au format JSON : https://peaceful-hamlet-8506.herokuapp.com/search/?key=DEPARTEMEN&val=63&format=json
+  * Données FTTH pour tous les NRO dont le nom contient "MAN" : https://peaceful-hamlet-8506.herokuapp.com/search/?key=NOM_NRO&val=MAN
 
 * Features à venir
   * parsing des dates de déploiement pour analyse
