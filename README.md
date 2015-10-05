@@ -9,7 +9,7 @@ Principe : recherche en fonction de mots clé dans le champ spécifié.
 
 * Exemples d'utilisation :
   * Données FTTH de la phase 1 au format CSV : https://peaceful-hamlet-8506.herokuapp.com/search/?key=ZONE&val=1
-  * Données FTTH de la phase 1 au format CSV : https://peaceful-hamlet-8506.herokuapp.com/search/?key=ZONE&val=1
+  * Données FTTH de la phase 2 au format CSV : https://peaceful-hamlet-8506.herokuapp.com/search/?key=ZONE&val=2
   * Données FTTH de la phase 1 au format JSON : https://peaceful-hamlet-8506.herokuapp.com/search/?key=ZONE&val=1&format=json
   * Données FTTH de la phase 2 au format JSON : https://peaceful-hamlet-8506.herokuapp.com/search/?key=ZONE&val=2&format=json
   * Données FTTH du département 63 au format CSV : https://peaceful-hamlet-8506.herokuapp.com/search/?key=DEPARTEMEN&val=63
