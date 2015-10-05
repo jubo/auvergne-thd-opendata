@@ -14,8 +14,8 @@ class AuvergneTHDParser:
 
     Les fichiers kml ont été extraits des url suivantes 
 
-    wget -O ftth-phase1.kml http://www.auvergnetreshautdebit.fr/wp-content/themes/athd/kml/phase2/ftth-phase2.kml?20151002100409
-    wget -O ftth-phase2.kml http://www.auvergnetreshautdebit.fr/wp-content/themes/athd/kml/ftth.kml?20151002100409
+    wget -O ftth-phase2.kml http://www.auvergnetreshautdebit.fr/wp-content/themes/athd/kml/phase2/ftth-phase2.kml?20151002100409
+    wget -O ftth-phase1.kml http://www.auvergnetreshautdebit.fr/wp-content/themes/athd/kml/ftth.kml?20151002100409
 
     """
     def __init__(self):
